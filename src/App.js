@@ -34,15 +34,15 @@ class App extends React.Component{
   render(){
     let arr = ['Q','W','E','A','S','D','Z','X','C'];
     let DrumPads = arr.map((a) => <Drums bank={this.state.switch} letters={a} newName={this.changeName} power={this.state.power}/>);
-    return (
-             <div id='drum-machine'>
-               <div id="drums">{DrumPads}</div>
-               <Functionality name={this.state.soundName} 
-                 bank={this.state.switch}
-                 switch={this.switchBank}
-                 power={this.state.power}
-                 powerSwitch={this.powerSwitch} />
-             </div>
+    return (   
+        <div id='drum-machine'>
+           <div id="drums">{DrumPads}</div>
+           <Functionality name={this.state.soundName} 
+             bank={this.state.switch}
+             switch={this.switchBank}
+             power={this.state.power}
+             powerSwitch={this.powerSwitch} />
+        </div>
     );
   }
 }
